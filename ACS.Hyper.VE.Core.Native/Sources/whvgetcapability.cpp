@@ -1,5 +1,5 @@
 #include "..\Headers\pch.h"
-#include "..\Headers\platform.h"
+#include "..\Headers\whvgetcapability.h"
 
 bool IsHypervisorPresent()
 {
@@ -111,6 +111,8 @@ ProcessorVendor GetProcessorVendor()
 		case WHV_PROCESSOR_VENDOR::WHvProcessorVendorHygon:
 			Vendor = ProcessorVendor::Hygon;
 			break;
+		default:
+			throw "Vendor not Found!";
 		}
 
 		return Vendor;

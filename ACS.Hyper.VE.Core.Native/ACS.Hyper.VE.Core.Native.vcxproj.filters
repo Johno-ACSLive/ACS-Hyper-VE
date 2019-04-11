@@ -18,7 +18,10 @@
     <ClInclude Include="Headers\pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\platform.h">
+    <ClInclude Include="Headers\whvgetcapability.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\whvgetpartitioncounters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -26,7 +29,10 @@
     <ClCompile Include="Sources\pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sources\platform.cpp">
+    <ClCompile Include="Sources\whvgetcapability.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\whvgetpartitioncounters.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
