@@ -2,6 +2,8 @@
 
 extern "C"
 {
+#pragma region GetCapability
+
 	typedef struct Features
 	{
 		bool PartialUnmap;
@@ -115,4 +117,38 @@ extern "C"
 	__declspec(dllexport) ProcessorFeatures GetProcessorFeatures();
 	__declspec(dllexport) UINT8 GetProcessorClFlushSize();
 	__declspec(dllexport) ProcessorXSaveFeatures GetProcessorXSaveFeatures();
+
+#pragma endregion
+
+#pragma region GetPartitionCounters
+
+	typedef struct PartitionMemoryCounters
+	{
+		UINT64 Mapped4KPageCount;
+		UINT64 Mapped2MPageCount;
+		UINT64 Mapped1GPageCount;
+	} PartitionMemoryCounters;
+
+	__declspec(dllexport) PartitionMemoryCounters GetPartitionCounters();
+
+#pragma endregion
+
+#pragma region GetPartitionProperty
+
+	typedef struct CPUIDExit
+	{
+		UINT32 List[1];
+	} CPUIDExitList;
+
+	typedef struct CPUIDResult
+	{
+		UINT32 Function;
+		UINT32 Eax;
+		UINT32 Ebx;
+		UINT32 Ecx;
+		UINT32 Edx;
+	} CPUIDResult;
+
+#pragma endregion
+
 }

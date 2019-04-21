@@ -159,16 +159,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Headers\pch.h" />
-    <ClInclude Include="Headers\whvgetcapability.h" />
-    <ClInclude Include="Headers\whvgetpartitioncounters.h" />
+    <ClInclude Include="Headers\managedplatform.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Sources\whvgetpartitioncounters.cpp" />
     <ClCompile Include="Sources\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Sources\whvgetcapability.cpp" />
+    <ClCompile Include="Sources\managedplatform.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
